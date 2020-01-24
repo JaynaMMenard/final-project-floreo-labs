@@ -15,7 +15,7 @@ class App extends Component {
       intro: true
     };
   }
-  
+
   render() {
     const startGame = () => {
       this.setState({ intro: false });
@@ -30,7 +30,7 @@ class App extends Component {
               PLAY{" "}
             </button>
           </div>
-          
+
         </div>
       );
     }
@@ -42,7 +42,7 @@ class App extends Component {
       ) : (
         ""
       );
-      
+
     let gameOver =
       this.state.status === "over" ? (
         <GameOver
@@ -65,7 +65,7 @@ class App extends Component {
     return (
       <div className="App">
         <audio
-          src="/audioclips/Vivaldi.mp3"
+          src="/audioclips/Jazz.mp3"
           controls
           autoPlay
           hidden
@@ -76,8 +76,8 @@ class App extends Component {
         {/* Modal Pop-up Window */}
 
         <button className='infobtn' onClick={infobtnClicked}>How to Play</button>
-  
-        
+
+
         <div className='modal'>
           <div className='modal-content'>
             <button class="close" onClick={closebtnClicked}>&times;</button>
@@ -89,7 +89,7 @@ class App extends Component {
             <p><h3><b>End of the game</b></h3>The game ends when:
             <p>•One player wins, by making his color dominant on the board.</p>
 	          <p>•The players agree to finish the game (as a resignation, or a draw).</p>
-	          
+
             </p>
           </div>
         </div>
@@ -98,10 +98,10 @@ class App extends Component {
       </div>
     );
 
-    
+
   }
 
-  
+
 
   restartGame() {
     this.setState({
