@@ -15,7 +15,7 @@ class App extends Component {
       intro: true
     };
   }
-  
+
   render() {
     const startGame = () => {
       this.setState({ intro: false });
@@ -30,7 +30,7 @@ class App extends Component {
               PLAY{" "}
             </button>
           </div>
-          
+
         </div>
       );
     }
@@ -42,7 +42,7 @@ class App extends Component {
       ) : (
         ""
       );
-      
+
     let gameOver =
       this.state.status === "over" ? (
         <GameOver
@@ -73,13 +73,28 @@ class App extends Component {
         />
         {game}
 
-        
+        {/* Modal Pop-up Window */}
+
+        <button className='infobtn' onClick={infobtnClicked}>How to Play</button>
+
+
+        <div className='modal'>
+          <div className='modal-content'>
+            <button class="close" onClick={closebtnClicked}>&times;</button>
+            <p>Instructions</p>
+          </div>
+        </div>
+
+        {gameOver}
+      </div>
+
+
     );
 
-    
+
   }
 
-  
+
 
   restartGame() {
     this.setState({
