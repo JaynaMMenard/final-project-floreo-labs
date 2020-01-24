@@ -1,0 +1,10 @@
+.Board {
+    margin:0 auto;
+    border-radius: 1.5px;
+}
+
+.Board table {
+    background: lightslategray;
+   
+}
+
